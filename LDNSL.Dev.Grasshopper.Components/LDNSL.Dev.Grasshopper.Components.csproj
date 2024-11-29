@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <TargetExt>.gha</TargetExt>
+    <!--<ImplicitUsings>enable</ImplicitUsings>-->
+    <!--<Nullable>enable</Nullable>-->
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+
+  <ItemGroup> <Reference Include="netstandard" /> </ItemGroup>
+
+  <!--<ItemGroup> <Reference Include="LDNSL.Dev.Grasshopper.Library" /> </ItemGroup>-->
+
+  <ItemGroup> 
+    <EmbeddedResource Include="Resources\Cundall_C_24x24.png" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Cundall_C_24x24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grasshopper" Version="7.37.24004.15001-rc" />
+    <PackageReference Include="NETStandard.Library.NETFramework" Version="2.0.0-preview1-25305-02" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LDNSL.Dev.Grasshopper.Library\LDNSL.Dev.Grasshopper.Library.csproj" />
+  </ItemGroup>
+
+</Project>
