@@ -13,5 +13,10 @@ namespace LDNSL.Dev.Grasshopper.Library.Utilities
             return a + b;
         }
         
+        public static double subtractNumbers(double a, double b)
+        {
+            return a - b;
+        }
+        
     }
 }
