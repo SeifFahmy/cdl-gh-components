@@ -17,6 +17,24 @@ namespace LDNSL.Dev.Grasshopper.Library.Utilities
         {
             return a - b;
         }
+
+        public static List<bool> stringEquals(string txt, List<string> txtList)
+        {
+            List<bool> matchingText = new List<bool>();
+
+            foreach (string str in txtList)
+            {
+                if (str == txt)
+                {
+                    matchingText.Add(true);
+                }
+                else if (str != txt)
+                {
+                    matchingText.Add(false);
+                }
+            }
+            return matchingText;
+        }
         
     }
 }
