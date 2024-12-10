@@ -22,7 +22,7 @@ namespace LDNSL.Dev.Grasshopper.Library.Utilities
             return false;
         }
 
-        public static List<Line> RemoveDuplicateLines(List<Line> lines, double tolerance)
+        public static List<Line> removeDuplicateLines(List<Line> lines, double tolerance)
         {
             //Copy original list.
             List<Line> clean = new List<Line>(lines);
