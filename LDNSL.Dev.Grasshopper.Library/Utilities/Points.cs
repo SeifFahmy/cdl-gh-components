@@ -84,7 +84,7 @@ namespace LDNSL.Dev.Grasshopper.Library.Utilities
                 for (int j = clean.Count - 1; j > i; j--)
                 {
                     double d2 = squaredDistanceBetweenTwoPoints(clean[i], clean[j]);
-                    if (d2 < t2)
+                    if (d2 < t2 || d2 == 0)
                     {
                         clean.RemoveAt(j);
                     }
