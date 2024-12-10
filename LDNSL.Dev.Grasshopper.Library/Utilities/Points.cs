@@ -65,9 +65,9 @@ namespace LDNSL.Dev.Grasshopper.Library.Utilities
         //Returns true if coordinates of points are equal under a tolerance value.
         public static bool isSimilar(Point3d a, Point3d b, double tolerance)
         {
-            bool similar = Math.Abs(a.X - b.X) < tolerance
-            && Math.Abs(a.Y - b.Y) < tolerance
-            && Math.Abs(a.Z - b.Z) < tolerance;
+            bool similar = (Math.Abs(a.X - b.X) < tolerance || Math.Abs(a.X - b.X) == 0)
+            && (Math.Abs(a.Y - b.Y) < tolerance || Math.Abs(a.Y - b.Y) == 0)
+            && (Math.Abs(a.Z - b.Z) < tolerance || Math.Abs(a.Z - b.Z) == 0);
 
             return similar;
         }
