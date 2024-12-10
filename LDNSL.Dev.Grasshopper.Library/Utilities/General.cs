@@ -6,7 +6,7 @@ using Rhino.UI.ObjectProperties;
 
 namespace LDNSL.Dev.Grasshopper.Library.Utilities
 {
-    public class General
+    public static class General
     {
         public static double addNumbers(double a, double b)
         {
