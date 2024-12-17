@@ -9,17 +9,17 @@ using Rhino.Geometry;
 using Rhino.UI.ObjectProperties;
 using LDNSL.Dev.Grasshopper.Library;
 
-namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicatePoints
+namespace LDNSL.Dev.Grasshopper.Components.Vectors.CrossSectionRotations
 {
-    public class RemoveDuplicatePoints : GH_Component
+    public class CrossSectionRotations : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the AddNumbersComponent class.
         /// </summary>
-        public RemoveDuplicatePoints()
-          : base("RemoveDuplicatePoints", "RmvDupPts",
-              "Removes duplicate points from a list",
-              "LDNSL", "Points")
+        public CrossSectionRotations()
+          : base("CrossSectionRotations", "XSectRots",
+              "Finds the cross-section rotation for a beam",
+              "LDNSL", "Vectors")
         {
         }
 
@@ -28,8 +28,8 @@ namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicatePoints
         /// </summary>
         protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
-            pManager.AddPointParameter("PointList", "PtList", "List of points to check", GH_ParamAccess.list);
-            pManager.AddNumberParameter("Tolerance", "t", "Tolerance", GH_ParamAccess.item, 0);
+            pManager.AddCurveParameter("CurveList", "CrvList", "List of curves to check", GH_ParamAccess.list);
+            pManager.AddVectorParameter("Vector", "V", "Vector", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicatePoints
         /// </summary>
         protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
-            pManager.AddPointParameter("R", "R", "Result", GH_ParamAccess.list);
+            pManager.AddNumberParameter("R", "R", "Result", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -47,18 +47,18 @@ namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicatePoints
         protected override void SolveInstance(IGH_DataAccess DA)
         {
             //Define placeholder variables
-            List<Point3d> a = new List<Point3d>();
-            double b = 0;
+            List<Curve> a = new List<Curve>();
+            Vector3d b = new Vector3d(0,0,0);
 
             //Load values from inputs
             if (!DA.GetDataList(0, a)) return;
             if (!DA.GetData(1, ref b)) return;
 
             //Code
-            List<Point3d> cleanList = LDNSL.Dev.Grasshopper.Library.Utilities.Points.removeDuplicatePoints(a, b);
+            List<double> rotations = LDNSL.Dev.Grasshopper.Library.Utilities.Vectors.crossSectionRotations(a, b);
 
             //Outputs
-            DA.SetDataList(0, cleanList);
+            DA.SetDataList(0, rotations);
         }
 
         //Hide the component if you want
@@ -83,7 +83,7 @@ namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicatePoints
         /// </summary>
         public override Guid ComponentGuid
         {
-            get { return new Guid("5962628a-534f-4dce-932a-ad8b4ac36184"); }
+            get { return new Guid("d1f2a68d-f729-409c-b522-dad8910c9b1e"); }
         }
     }
 }

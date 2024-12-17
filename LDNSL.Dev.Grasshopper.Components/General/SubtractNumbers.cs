@@ -52,7 +52,6 @@ namespace LDNSL.Dev.Grasshopper.Components.General.AddNumbers
             if (!DA.GetData(1, ref b)) return;
 
             //Code
-            //double sum = a + b;
             double sum = LDNSL.Dev.Grasshopper.Library.Utilities.General.subtractNumbers(a,b);
 
             //Outputs
