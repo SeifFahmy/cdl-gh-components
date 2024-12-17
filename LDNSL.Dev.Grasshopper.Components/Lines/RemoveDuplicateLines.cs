@@ -55,7 +55,6 @@ namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicateLines
             if (!DA.GetData(1, ref b)) return;
 
             //Code
-            //double sum = a + b;
             List<Line> cleanList = LDNSL.Dev.Grasshopper.Library.Utilities.Lines.removeDuplicateLines(a, b);
 
             //Outputs

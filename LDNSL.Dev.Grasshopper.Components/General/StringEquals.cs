@@ -52,7 +52,6 @@ namespace LDNSL.Dev.Grasshopper.Components.General.StringEquals
             if (!DA.GetDataList(1, b)) return;
 
             //Code
-            //double sum = a + b;
             List<bool> isEqual = LDNSL.Dev.Grasshopper.Library.Utilities.General.stringEquals(a,b);
 
             //Outputs
