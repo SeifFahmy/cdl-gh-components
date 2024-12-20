@@ -14,7 +14,7 @@ namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicateLines
     public class RemoveDuplicateLines : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the AddNumbersComponent class.
+        /// Initializes a new instance of the RemoveDuplicateLines Component class.
         /// </summary>
         public RemoveDuplicateLines()
           : base("RemoveDuplicateLines", "RmvDupLns",
