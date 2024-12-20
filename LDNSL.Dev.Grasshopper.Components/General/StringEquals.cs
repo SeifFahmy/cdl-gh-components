@@ -10,7 +10,7 @@ namespace LDNSL.Dev.Grasshopper.Components.General.StringEquals
     public class StringEquals : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the AddNumbersComponent class.
+        /// Initializes a new instance of the StringEquals Component class.
         /// </summary>
         public StringEquals()
           : base("StringEquals", "StrEqls",

@@ -14,7 +14,7 @@ namespace LDNSL.Dev.Grasshopper.Components.General.RemoveDuplicatePoints
     public class RemoveDuplicatePoints : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the AddNumbersComponent class.
+        /// Initializes a new instance of the RemoveDuplicatePoints Component class.
         /// </summary>
         public RemoveDuplicatePoints()
           : base("RemoveDuplicatePoints", "RmvDupPts",

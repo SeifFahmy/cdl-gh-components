@@ -10,7 +10,7 @@ namespace LDNSL.Dev.Grasshopper.Components.General.AddNumbers
     public class SubtractNumbers : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the AddNumbersComponent class.
+        /// Initializes a new instance of the SubtractNumbers Component class.
         /// </summary>
         public SubtractNumbers()
           : base("SubtractNumbers", "SubNums",

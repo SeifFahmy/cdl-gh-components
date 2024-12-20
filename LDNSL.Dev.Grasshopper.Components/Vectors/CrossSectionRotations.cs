@@ -14,7 +14,7 @@ namespace LDNSL.Dev.Grasshopper.Components.Vectors.CrossSectionRotations
     public class CrossSectionRotations : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the AddNumbersComponent class.
+        /// Initializes a new instance of the CrossSectionRotations Component class.
         /// </summary>
         public CrossSectionRotations()
           : base("CrossSectionRotations", "XSectRots",
